@@ -108,7 +108,7 @@ func (l *logger) collect(c Collector) {
 }
 
 func (l *logger) close(timeout time.Duration) error {
-	fmt.Println("begin select")
+	fmt.Println("before select")
 	select {
 	case <-time.After(time.Second):
 		fmt.Println("timeout occurred")
